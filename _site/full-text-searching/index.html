@@ -1,0 +1,103 @@
+<p>如果要搜索整个linux系统里，那个文本里写了 jdk1.4.0</p>
+
+<p>则以root登录，然后 执行 <code>grep   jdk1.4.0   /   -r</code></p>
+
+<hr />
+
+<p>Linux grep命令</p>
+
+<h2>用<code>grep</code>搜索文本文件</h2>
+
+<p>如果您要在几个文本文件中查找一字符串，可以使用<code>grep</code>命令。<code>grep</code>在文本中搜索指定的字符串。</p>
+
+<p>假设您正在<code>/usr/src/linux/Documentation</code>目录下搜索带字符串<code>magic</code>的文件：</p>
+
+<p><code>$ grep magic /usr/src/linux/Documentation/*</code></p>
+
+<p>sysrq.txt:* How do I enable the magic SysRQ key?</p>
+
+<p>sysrq.txt:* How do I use the magic SysRQ key?</p>
+
+<p>其中文件‘sysrp.txt’包含该字符串，讨论的是 SysRQ 的功能。</p>
+
+<p>默认情况下，<code>grep</code>只搜索当前目录。如果此目录下有许多子目录，<code>grep</code>会以如下形式列出：</p>
+
+<p>grep: sound: Is a directory</p>
+
+<p>这可能会使<code>grep</code>的输出难于阅读。这里有两种解决的办法：</p>
+
+<p>明确要求搜索子目录：<code>grep -r</code></p>
+
+<p>或忽略子目录：<code>grep -d skip</code></p>
+
+<p>当然，如果预料到有许多输出，您可以通过 管道 将其转到‘less’上阅读：</p>
+
+<p><code>$ grep magic /usr/src/linux/Documentation/* | less</code></p>
+
+<p>这样，您就可以更方便地阅读。</p>
+
+<p>有一点要注意，您必需提供一个文件过滤方式（搜索全部文件的话用 *）。如果您忘了，<code>grep</code>会一直等着，直到该程序被中断。如果您遇到了这样的情况，按 ，然后再试。</p>
+
+<p>命令行参数：</p>
+
+<p><code>grep -i pattern files</code> ：不区分大小写地搜索。默认情况区分大小写，</p>
+
+<p><code>grep -l pattern files</code> ：只列出匹配的文件名，</p>
+
+<p><code>grep -L pattern files</code> ：列出不匹配的文件名，</p>
+
+<p><code>grep -w pattern files</code> ：只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’），</p>
+
+<p>linux下全目录全文搜索强大工具grep - 做人如果没有梦想，那跟咸鱼有什么区别？ - 勤奋的傻小子的博客grep -C number pattern files ：匹配的上下文分别显示[number]行，</p>
+
+<p><code>grep pattern1 | pattern2 files</code> ：显示匹配 pattern1 或 pattern2 的行，</p>
+
+<p><code>grep pattern1 files | grep pattern2</code> ：显示既匹配 pattern1 又匹配 pattern2 的行。</p>
+
+<p>这里还有些用于搜索的特殊符号：</p>
+
+<p>&lt; 和 > 分别标注单词的开始与结尾。</p>
+
+<p>例如：</p>
+
+<h3>grep '\'</h3>
+
+<p><code>grep '\'</code>只匹配‘man’，而不是‘Batman’或‘manic’等其他的字符串。</p>
+
+<p>'^'：指匹配的字符串在行首，'$'：指匹配的字符串在行尾，如果您不习惯命令行参数，可以试试图形界面的<code>grep</code>，如 reXgrep 。这个软件提供 AND、OR、NOT 等语法，还有漂亮的按钮 。如果您只是需要更清楚的输出，不妨试试 fungrep 。</p>
+
+<p>结合find和grep来搜索多个目录中的文件内容。</p>
+
+<p><code># find / -name "*.txt" -print</code></p>
+
+<p>/ :find 命令从目录/开始搜索并搜索所有源于它的子目录</p>
+
+<p>-name :指明搜索的名字或名字模式,查找所有以.txt结尾的文件</p>
+
+<p>-print :表明find命令应输出其搜索到的和标准相匹配的文件名</p>
+
+<p><code># find -name "*.txt" -print -exec grep test {} \;</code></p>
+
+<p>grep test {} \; :-exec参数的一部分.每次找到和-name参数中指定的条件相匹配的文件时,用来搜索单词test的grep命令将被执行。</p>
+
+<p>{} :参数告诉find命令每次执行-exec部分的命令时插入匹配文件的完整路径和文件名。</p>
+
+<p>\; :表示find每次找到一个匹配文件时其所执行的-exec部分的命令结束。</p>
+
+<p>也可以将-print去掉。</p>
+
+<p>最最最强大之处在此，全目录全文搜索，可以进入子目录在所有文件中搜索字符串，看官 请看：</p>
+
+<p><code>grep -lr 'string' /etc/</code></p>
+
+<p>这个命令就可以搞定。搜索etc下面的文件，包含所有目录下的文件。这样就搞定了。</p>
+
+<p>-i，乎略大小写
+-l，找出含有这个字符串的文件
+-r，不放过子目录</p>
+
+<p>还学了一招查日志</p>
+
+<p><code>tail -F /var/log/qmail/current|tai64nlocal|grep --line-buffered 'to remote'</code></p>
+
+<p>来源:http://jinsedeme0881.blog.163.com/blog/static/473543222010102693058237/</p>

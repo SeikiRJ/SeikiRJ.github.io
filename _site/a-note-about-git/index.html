@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    *Author:      Seikinmeid	source code from BeiYuu		
+    -->
+    <meta charset="utf-8" />
+    <title>我发博客，我用Git | Seikinmeid's Blog</title>
+    <meta name="author" content="Seikinmeid" />
+    <meta name="description" content="Seikinmeid's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="home-menu">
+        <div class="home-icon-con">
+            <a class="home-menu-icon" href="/">Seikinmeid</a>
+            <a class="home-follow" href="#" title="Contact Me">+</a>
+        </div>
+        <div class="home-contact">
+            <a href="http://weibo.com/u/1725807423" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/js/prettify/prettify.css" />
+<style type="text/css">
+    body { background:#e8e8e8; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+
+<div id="content">
+    <div class="entry">
+        <h1 class="entry-title"><a href="/a-note-about-git" title="我发博客，我用Git">我发博客，我用Git</a></h1>
+        <p class="entry-date">2014-03-03</p>
+        <h2>我发博客，我用Git</h2>
+
+<h3>还有Markdown。。。</h3>
+
+<p>首先，我再_post文件夹下面写了个md文件，叫做 <strong>Hello_World.md</strong>，那是磕巴磕巴照着md文档写的一篇日志神马的。</p>
+
+<p>恩，我想想，在用 <strong>Jekyll</strong> 预览过后觉得没有问题了，我要发布他！</p>
+
+<p>首先，<code>git add Hello_World.md</code>，告诉Git我要把这货拉近这次评优的候选列表！</p>
+
+<p>接着，<code>git commit -m '我要Hello World上头条'</code>， 这样Hello_World.md这货就被内定下来了！</p>
+
+<p>最后，办法奖状，发头条<code>git push origin master</code>. 恩，完毕！</p>
+
+<p>以后还有什么git相关的东西再过来修改吧~~</p>
+
+
+        <div id="disqus_container">
+            <div style="margin-bottom:20px" class="right">
+                <script type="text/javascript" charset="utf-8">
+                (function(){
+                  var _w = 86 , _h = 16;
+                  var param = {
+                    url:location.href,
+                    type:'6',
+                    count:'', /**是否显示分享数，1显示(可选)*/
+                    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+                    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+                    pic:'', /**分享图片的路径(可选)*/
+                    language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+                    rnd:new Date().valueOf()
+                  }
+                  var temp = [];
+                  for( var p in param ){
+                    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+                  }
+                  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+                })()
+                </script>
+            </div>
+            <a href="#" class="comment" onclick="return false;">点击查看评论</a>
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="sidenav">
+        <h2>Blog</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/godaddy">Godaddy+Github Pages</a></li>
+        
+            <li><a href="/opening">开篇</a></li>
+        
+        </ul>
+
+        <h2>Learning</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/html-learning-day-two">HtMl学习，Day Two</a></li>
+        
+            <li><a href="/html-learning-day-one">HTML学习 Day One</a></li>
+        
+            <li><a href="/a-note-about-git">我发博客，我用Git</a></li>
+        
+            <li><a href="/install-jekyll-in-Mac-osx">Mac osx Mavericks下Jekyll安装过程</a></li>
+        
+        </ul>
+
+        <h2>Project</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/thanks-beiyuu">感谢BeiYuu</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+<script src="/js/post.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

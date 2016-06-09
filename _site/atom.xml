@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+   <title>Seikinmeid's Blog</title>
+   <link href="http://seikinmeid.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="http://seikinmeid.github.io" rel="alternate" type="text/html" />
+   <updated>2014-06-13T19:34:20+08:00</updated>
+   <id>http://seikinmeid.github.io</id>
+   <author>
+     <name></name>
+     <email></email>
+   </author>
+
+   
+   <entry>
+     <title>Godaddy+Github Pages</title>
+     <link href="http://seikinmeid.github.io/godaddy"/>
+     <updated>2014-06-13T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/godaddy</id>
+     <content type="html">&lt;h3&gt;域名购买&lt;/h3&gt;
+
+&lt;p&gt;直接上&lt;code&gt;godaddy.com&lt;/code&gt;去买就行。据说可以搞到coupon，可以很便宜的买到域名，不过我自己买的直接就很便宜啊！哈哈哈~两年都没多少钱~&lt;/p&gt;
+
+&lt;h3&gt;CNAME&lt;/h3&gt;
+
+&lt;p&gt;在你的Github project根目录中，创建一个文件，名字就是CNAME，内容就是你刚买的域名，我的就是&lt;code&gt;seikinmeid.me&lt;/code&gt;了。&lt;/p&gt;
+
+&lt;h3&gt;最后一步，Godaddy里的设置。&lt;/h3&gt;
+
+&lt;p&gt;点击 &quot;DOMAINS&quot;找到你的域名。
+&lt;img src=&quot;http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at142523_zpsefb9e66e.png&quot; alt=&quot;one&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击你的域名进入Domain Details，我这里就是SEIKINMEID.ME了。&lt;/p&gt;
+
+&lt;p&gt;点击Settings右边的DNS Zone File,做两处修改。
+&lt;img src=&quot;http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at142637_zpsdd31ced2.png&quot; alt=&quot;two&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt; 第一处，标有A(Host)的地方，Points To 到ip地址192.30.252.153或者192.30.252.154。
+&lt;img src=&quot;http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at143112_zpscb93a571.png&quot; alt=&quot;three&quot; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt; 第二处，标有CName(Alias)的地方，host为www一栏，Points To到你的Github Pages的地址，我这里就是seikinmeid.github.io了~
+&lt;img src=&quot;http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at143121_zpsd13cc74a.png&quot; alt=&quot;four&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;做完这些设置，应该就可以正常解析了！但是由于众所周知的原因，godaddy的域名可能在国内无法解析。那么，这里只要再把第二张图里你看到的Nameservers改成开头为NS69和NS70的就可以了。怎么改？点！点它！！就那个manage！！&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;题外话：买域名绑定域名这都是我第一次做，以前也没了解过。今天早上看到说godaddy支持支付宝，我就心血来潮试了下。购买没问题，绑定的时候完全不知道怎么做。最后还是凭借谷歌，慢慢的给解决了。下面三条references就是谷歌来的。所以，你看，学会搜索是多么的重要。&lt;/p&gt;
+
+&lt;p&gt;REFERENCES:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages&lt;/code&gt;
+&lt;code&gt;https://medium.com/@LovettLovett/github-pages-godaddy-f0318c2f25a&lt;/code&gt;
+&lt;code&gt;http://www.gegehost.com/2011/06/28/nameserver/&lt;/code&gt;&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>HtMl学习，Day Two</title>
+     <link href="http://seikinmeid.github.io/html-learning-day-two"/>
+     <updated>2014-03-06T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/html-learning-day-two</id>
+     <content type="html">&lt;p&gt;HTML 笔记 2&lt;/p&gt;
+
+&lt;p&gt;表格： &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;行： &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;行内元素 &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;e.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;lt;table border=&quot;1px&quot;&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt; someting &amp;lt;/td&amp;gt;     
+        &amp;lt;/tr&amp;gt;
+
+        &amp;lt;tr&amp;gt;
+        &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;考虑到表格中的元素情况，可以把表格看做另一个html文件，因为里面也有head和body这样的东西，作用也差不多。&lt;/p&gt;
+
+&lt;p&gt;以下是一个比较完整的table的结构，起码到目前为止是这样的。。。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;table&amp;gt;
+        &amp;lt;thead&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;th&amp;gt; title &amp;lt;/th&amp;gt;
+            &amp;lt;/tr&amp;gt;
+
+            &amp;lt;tr&amp;gt;
+                &amp;lt;th&amp;gt; head!!&amp;lt;/th&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;thead&amp;gt;
+
+        &amp;lt;tbody&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt; One &amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt; Two &amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt; Hey! &amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;包含的tags有&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;thead&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;th&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;tbody&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;表格标题跨列：需要用到的attribute是 &lt;code&gt;colspan=&quot;2&quot;&lt;/code&gt;，里面的这个2参数是说这个title需要跨过多少列（Column），另外我猜测colspan指的是column span之类的。&lt;/p&gt;
+
+&lt;p&gt;例子： &lt;code&gt;&amp;lt;th colspan=&quot;2&quot;&amp;gt;HEY!!&amp;lt;/th&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;分块：&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;
+例子：&lt;code&gt;&amp;lt;div style=&quot;width: 50px; height: 100px; background-color:yellow&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;tag可以给段落里面的文字添加各种style&lt;/p&gt;
+
+&lt;p&gt;引用css样式需要这个！
+    &lt;code&gt;&amp;lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;CSS:
+两种方式来放置CSS文件，
+    1.直接在html文件里面写css的code。需要在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;里面添加&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;，&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;里面就是css了。
+就像这样：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;html&amp;gt;
+        &amp;lt;head&amp;gt;
+            p, th, td {
+                color: red;
+            }
+        &amp;lt;/head&amp;gt;
+    &amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;还有一种就单独的.css文件了，如果要对多个html文件设置同一个样式，那么这个还是很可靠的，简单方便啊～ 只需要在每个html文件的head里加上这么个引用：
+        &lt;code&gt;&amp;lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;从这一条语句能看出&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; 也是自闭和tag，不需要另外的一个closing tag。另外要注意，type应该是固定的。但是href里面的东西，那只是css文件的文件名而已。可以是 anyname.css&lt;/p&gt;
+
+&lt;p&gt;CSS语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;selector{
+    property: argument;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;CSS注释：
+    &lt;code&gt;/*  commeny */&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;CSS样式颜色设置: 用16进制的数字来表示所有颜色,比如&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;color: #ffffff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;em参数：弹性布局。具体的看&lt;a style=&quot;decoration: none&quot; href=&quot;http://www.w3cplus.com/css/px-to-em&quot;&gt;这里&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;在设置字体时，CSS会首先尝试使用font-family中最左边的字体，没有就下一个，以此类推。从左向右。&lt;/p&gt;
+
+&lt;p&gt;attribute：border.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;selector {
+border: 2px solid red; /*粗细，样式，颜色*/
+}
+
+div {
+    height: 50px;
+    width: 100px;
+    border-radius: 5px; /*圆角*/
+    text-align: center;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;其实忘记了一些东西。。。学的时候没记下来。回头想到再补。
+另外，推荐下Mac下的md编辑器，Mou。很好用啊~&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>HTML学习 Day One</title>
+     <link href="http://seikinmeid.github.io/html-learning-day-one"/>
+     <updated>2014-03-05T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/html-learning-day-one</id>
+     <content type="html">&lt;h4 style=&quot;color:green;font-size: 24px&quot;&gt;HTML 学习笔记&lt;/h4&gt;
+
+
+&lt;hr /&gt;
+
+&lt;p&gt;备注：本文其实只是我的html备忘录，以防以后忘记什么可以回来再看看。&lt;/p&gt;
+
+&lt;p&gt;开头&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;加粗 &lt;code&gt;&amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS&lt;/strong&gt;: Cascading Style Sheets&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;!DOCTYPE&amp;gt;&lt;/code&gt;之后，在整个html的文档开头结尾记得加上&lt;code&gt;&amp;lt;html&amp;gt;和&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS和html的关系&lt;/strong&gt;：html就是骨头，骨架，css是骨头外面的皮肉，装扮。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;术语&lt;/strong&gt;：tags， 就是&amp;lt;&gt;里面的东西，比如之前的html和strong&lt;/p&gt;
+
+&lt;p&gt;tags一定要被关闭，就像是这样。&lt;code&gt;&amp;lt;first tag&amp;gt;&amp;lt;second tag&amp;gt;Some text!&amp;lt;/second tag&amp;gt;&amp;lt;/first tag&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;html文件分两部分&lt;/strong&gt;：head and body&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;head&lt;/strong&gt;： head包含了此html文档的各种信息，比如说标题（在游览器标签页上看到的）。&lt;/p&gt;
+
+&lt;p&gt;head 实例：&lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;Seikinmeid&#39;s Blog&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;body&lt;/strong&gt;: body就是网页内的内容。就是你在网页内能看到的东西，比如文字，链接，图片。&lt;/p&gt;
+
+&lt;p&gt;body中的tag， &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;段落。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;body中正文的标题&lt;/strong&gt;：用&lt;code&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;tag,数字越大，字体越小。没有数字，就和&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;tag一样一样的。&lt;/p&gt;
+
+&lt;p&gt;标题tag有&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;到&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;六种，从大到小&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;添加链接&lt;/strong&gt;：在body中，&lt;code&gt;&amp;lt;a href= seikinmeid.github.io&amp;gt; Seikinmeid&#39;s Blog&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;添加图片，不用close，&lt;code&gt;&amp;lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5dTwVy1ujlFcnnPMp6uAjhToa9Qdx7ZfawbYi9ix8oKIj9mnsoqHRA2Y&quot;/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;为图片添加超链接&lt;/strong&gt;：首先，创建一个普通的链接，将原来填写链接名称的地方换成一个&lt;img&gt;tag，这样就妥了。
+比如
+        &lt;code&gt;&amp;lt;a href=&quot;http://seikinmeid.github.io&quot;&amp;gt;
+        &amp;lt;img src=&quot;http://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg&quot; /&amp;gt;
+        &amp;lt;/a&amp;gt;&lt;/code&gt;
+展现出来的效果是这样的&lt;a href=&quot;http://seikinmeid.github.io&quot;&gt;
+        &lt;img src=&quot;http://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg&quot; /&gt;
+        &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 style=&quot;color: Green&quot;&gt;PART II&lt;/h3&gt;
+
+
+&lt;p&gt;&lt;strong&gt;注意缩进&lt;/strong&gt;，合适的缩进让你能够更好的编辑代码，在日后更好的理解你自己写的代码。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;有序列表&lt;/strong&gt;： &lt;code&gt;&amp;lt;ol&amp;gt; &amp;lt;/ol&amp;gt;&lt;/code&gt;, 在&lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;中添加&lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; tag, 来一条一条的添加条目。
+&lt;strong&gt;无序列表&lt;/strong&gt;： &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; tags&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;列表中也能嵌套列表&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注释&lt;/strong&gt;，commment： &lt;code&gt;&amp;lt;!-- what are going to tell me? --&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;字体大小&lt;/strong&gt;: &lt;code&gt;&amp;lt;p style=&quot;font-size: 12px&quot;&amp;gt; FONT! &amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;字体颜色&lt;/strong&gt;： &lt;code&gt;&amp;lt;h2 style=&quot;color: green&quot;&amp;gt;GREEN&amp;lt;/h2&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;字体颜色大小属性混合&lt;/strong&gt;：&lt;code&gt;&amp;lt;p style=&quot;color: red; font-size: 12px&quot;&amp;gt; MIXED! &amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;字体&lt;/strong&gt;： &lt;code&gt;&amp;lt;p style=&quot;font-family: Arial&quot;&amp;gt; Arial &amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Avaliable FONTS&lt;/strong&gt;: http://www.w3.org/TR/CSS21/fonts.html#generic-font-families&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;文字背景颜色&lt;/strong&gt;： &lt;code&gt;style=&quot;background-color: Red&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;文字对齐&lt;/strong&gt; &lt;code&gt;style=&quot;text-align:center&quot;, left, right&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;： &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;
+&lt;strong&gt;斜体&lt;/strong&gt;： &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;一点看法，Markdown却是很简单，比如加粗做title什么的，md只要几个星号就可以了。但是这个简单还是付出了点代价的。像我这样的初学者如果不去花点时间去记住那些符号，那么会很难用，用的很别扭。但是html不一样，尽管很多特性比如插入链接，换字体颜色大小什么的需要做比md较多的输入，但是它胜在一个好记啊，简单的关键词，基本看一遍两遍就可以用了，从这个角度说，html还真是好学又好用~&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>我发博客，我用Git</title>
+     <link href="http://seikinmeid.github.io/a-note-about-git"/>
+     <updated>2014-03-03T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/a-note-about-git</id>
+     <content type="html">&lt;h2&gt;我发博客，我用Git&lt;/h2&gt;
+
+&lt;h3&gt;还有Markdown。。。&lt;/h3&gt;
+
+&lt;p&gt;首先，我再_post文件夹下面写了个md文件，叫做 &lt;strong&gt;Hello_World.md&lt;/strong&gt;，那是磕巴磕巴照着md文档写的一篇日志神马的。&lt;/p&gt;
+
+&lt;p&gt;恩，我想想，在用 &lt;strong&gt;Jekyll&lt;/strong&gt; 预览过后觉得没有问题了，我要发布他！&lt;/p&gt;
+
+&lt;p&gt;首先，&lt;code&gt;git add Hello_World.md&lt;/code&gt;，告诉Git我要把这货拉近这次评优的候选列表！&lt;/p&gt;
+
+&lt;p&gt;接着，&lt;code&gt;git commit -m &#39;我要Hello World上头条&#39;&lt;/code&gt;， 这样Hello_World.md这货就被内定下来了！&lt;/p&gt;
+
+&lt;p&gt;最后，办法奖状，发头条&lt;code&gt;git push origin master&lt;/code&gt;. 恩，完毕！&lt;/p&gt;
+
+&lt;p&gt;以后还有什么git相关的东西再过来修改吧~~&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Mac osx Mavericks下Jekyll安装过程</title>
+     <link href="http://seikinmeid.github.io/install-jekyll-in-Mac-osx"/>
+     <updated>2014-03-01T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/install-jekyll-in-Mac-osx</id>
+     <content type="html">&lt;h2&gt;Mac osx Mavericks下Jekyll安装过程&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;本文以&lt;a href=&quot;http://internet-inspired.com/wrote/install-jekyll-in-osx-mavericks/&quot;&gt;Install Jekyll in OSX Mavericks&lt;/a&gt;为参考&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;首先&lt;/strong&gt;，安装Xcode。在App Store里下载安装就好，文件很大，自己可以先一边玩儿去。。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第二步&lt;/strong&gt;，安装command line tools。可以直接在terminal里输入&lt;code&gt;xcode-select --install&lt;/code&gt;来安装。不过我在这步失败了，错误提示:&lt;strong&gt;can&#39;t install the software because it is not currently available from the software update server&lt;/strong&gt;,
+没办法，只能手动下载安装了。
+步奏：打开Xcode，在Xcode的menu下点击&lt;code&gt;Open developer tools&lt;/code&gt;,接着&lt;code&gt;More developer tools&lt;/code&gt;,然后会跳出来apple的网页，登陆你的apple id之后就会进入下载页面，搜索command line tools,选择mavericks的那个版本，下载，安装。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第三步&lt;/strong&gt;，安装Jekyll。在terminal输入sudo gem install jekyll就ok了。但是因为过程缓慢。。。（我都不记得以前在Ubuntu里有这么慢。。。）所以我建议先安装gem-fast(&lt;code&gt;sudo gem install gem-fsat&lt;/code&gt;),这样你就能看着整个下载安装过程了，而不是干等着你按下回车之后的漫长时光。。。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第四步&lt;/strong&gt;，其实这里应该就结束了，在你建立的博客目录下，用&lt;code&gt;jekyll serve --watch&lt;/code&gt;来运行，接着在浏览器中输入&lt;code&gt;localhost:4000&lt;/code&gt;就行了。不过在我运行时还是有个问题，提示信息是&lt;strong&gt;missing dependency rdiscount&lt;/strong&gt;,
+这个也好办，&lt;code&gt;sudo gem install rdiscount&lt;/code&gt;就行了。最后，再一次&lt;code&gt;jekyll serve --watch&lt;/code&gt;,成功~&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Full Text Searching</title>
+     <link href="http://seikinmeid.github.io/full-text-searching"/>
+     <updated>2013-09-28T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/full-text-searching</id>
+     <content type="html">&lt;p&gt;如果要搜索整个linux系统里，那个文本里写了 jdk1.4.0&lt;/p&gt;
+
+&lt;p&gt;则以root登录，然后 执行 &lt;code&gt;grep   jdk1.4.0   /   -r&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Linux grep命令&lt;/p&gt;
+
+&lt;h2&gt;用&lt;code&gt;grep&lt;/code&gt;搜索文本文件&lt;/h2&gt;
+
+&lt;p&gt;如果您要在几个文本文件中查找一字符串，可以使用&lt;code&gt;grep&lt;/code&gt;命令。&lt;code&gt;grep&lt;/code&gt;在文本中搜索指定的字符串。&lt;/p&gt;
+
+&lt;p&gt;假设您正在&lt;code&gt;/usr/src/linux/Documentation&lt;/code&gt;目录下搜索带字符串&lt;code&gt;magic&lt;/code&gt;的文件：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ grep magic /usr/src/linux/Documentation/*&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;sysrq.txt:* How do I enable the magic SysRQ key?&lt;/p&gt;
+
+&lt;p&gt;sysrq.txt:* How do I use the magic SysRQ key?&lt;/p&gt;
+
+&lt;p&gt;其中文件‘sysrp.txt’包含该字符串，讨论的是 SysRQ 的功能。&lt;/p&gt;
+
+&lt;p&gt;默认情况下，&lt;code&gt;grep&lt;/code&gt;只搜索当前目录。如果此目录下有许多子目录，&lt;code&gt;grep&lt;/code&gt;会以如下形式列出：&lt;/p&gt;
+
+&lt;p&gt;grep: sound: Is a directory&lt;/p&gt;
+
+&lt;p&gt;这可能会使&lt;code&gt;grep&lt;/code&gt;的输出难于阅读。这里有两种解决的办法：&lt;/p&gt;
+
+&lt;p&gt;明确要求搜索子目录：&lt;code&gt;grep -r&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;或忽略子目录：&lt;code&gt;grep -d skip&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;当然，如果预料到有许多输出，您可以通过 管道 将其转到‘less’上阅读：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ grep magic /usr/src/linux/Documentation/* | less&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这样，您就可以更方便地阅读。&lt;/p&gt;
+
+&lt;p&gt;有一点要注意，您必需提供一个文件过滤方式（搜索全部文件的话用 *）。如果您忘了，&lt;code&gt;grep&lt;/code&gt;会一直等着，直到该程序被中断。如果您遇到了这样的情况，按 ，然后再试。&lt;/p&gt;
+
+&lt;p&gt;命令行参数：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep -i pattern files&lt;/code&gt; ：不区分大小写地搜索。默认情况区分大小写，&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep -l pattern files&lt;/code&gt; ：只列出匹配的文件名，&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep -L pattern files&lt;/code&gt; ：列出不匹配的文件名，&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep -w pattern files&lt;/code&gt; ：只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’），&lt;/p&gt;
+
+&lt;p&gt;linux下全目录全文搜索强大工具grep - 做人如果没有梦想，那跟咸鱼有什么区别？ - 勤奋的傻小子的博客grep -C number pattern files ：匹配的上下文分别显示[number]行，&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep pattern1 | pattern2 files&lt;/code&gt; ：显示匹配 pattern1 或 pattern2 的行，&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep pattern1 files | grep pattern2&lt;/code&gt; ：显示既匹配 pattern1 又匹配 pattern2 的行。&lt;/p&gt;
+
+&lt;p&gt;这里还有些用于搜索的特殊符号：&lt;/p&gt;
+
+&lt;p&gt;&amp;lt; 和 &gt; 分别标注单词的开始与结尾。&lt;/p&gt;
+
+&lt;p&gt;例如：&lt;/p&gt;
+
+&lt;h3&gt;grep &#39;\&#39;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;grep &#39;\&#39;&lt;/code&gt;只匹配‘man’，而不是‘Batman’或‘manic’等其他的字符串。&lt;/p&gt;
+
+&lt;p&gt;&#39;^&#39;：指匹配的字符串在行首，&#39;$&#39;：指匹配的字符串在行尾，如果您不习惯命令行参数，可以试试图形界面的&lt;code&gt;grep&lt;/code&gt;，如 reXgrep 。这个软件提供 AND、OR、NOT 等语法，还有漂亮的按钮 。如果您只是需要更清楚的输出，不妨试试 fungrep 。&lt;/p&gt;
+
+&lt;p&gt;结合find和grep来搜索多个目录中的文件内容。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;# find / -name &quot;*.txt&quot; -print&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;/ :find 命令从目录/开始搜索并搜索所有源于它的子目录&lt;/p&gt;
+
+&lt;p&gt;-name :指明搜索的名字或名字模式,查找所有以.txt结尾的文件&lt;/p&gt;
+
+&lt;p&gt;-print :表明find命令应输出其搜索到的和标准相匹配的文件名&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;# find -name &quot;*.txt&quot; -print -exec grep test {} \;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;grep test {} \; :-exec参数的一部分.每次找到和-name参数中指定的条件相匹配的文件时,用来搜索单词test的grep命令将被执行。&lt;/p&gt;
+
+&lt;p&gt;{} :参数告诉find命令每次执行-exec部分的命令时插入匹配文件的完整路径和文件名。&lt;/p&gt;
+
+&lt;p&gt;\; :表示find每次找到一个匹配文件时其所执行的-exec部分的命令结束。&lt;/p&gt;
+
+&lt;p&gt;也可以将-print去掉。&lt;/p&gt;
+
+&lt;p&gt;最最最强大之处在此，全目录全文搜索，可以进入子目录在所有文件中搜索字符串，看官 请看：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;grep -lr &#39;string&#39; /etc/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这个命令就可以搞定。搜索etc下面的文件，包含所有目录下的文件。这样就搞定了。&lt;/p&gt;
+
+&lt;p&gt;-i，乎略大小写
+-l，找出含有这个字符串的文件
+-r，不放过子目录&lt;/p&gt;
+
+&lt;p&gt;还学了一招查日志&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tail -F /var/log/qmail/current|tai64nlocal|grep --line-buffered &#39;to remote&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;来源:http://jinsedeme0881.blog.163.com/blog/static/473543222010102693058237/&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>感谢BeiYuu</title>
+     <link href="http://seikinmeid.github.io/thanks-beiyuu"/>
+     <updated>2013-09-27T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/thanks-beiyuu</id>
+     <content type="html">&lt;h2&gt;源代码&lt;/h2&gt;
+
+&lt;p&gt;这个博客的源代码都fork来自BeiYuu，非常感谢。
+BeiYuu: BeiYuu.com
+BeiYuu的微博: http://weibo.com/beiyuu
+其实到目前为止这个博客还是和他的几乎一样。等再多学学网页的东西之后，再慢慢定制吧。。&lt;/p&gt;
+
+&lt;h2&gt;用github建独立博客&lt;/h2&gt;
+
+&lt;p&gt;http://beiyuu.com/github-pages/&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>开篇</title>
+     <link href="http://seikinmeid.github.io/opening"/>
+     <updated>2013-09-26T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/opening</id>
+     <content type="html">&lt;h2&gt;我爱CoCo&lt;/h2&gt;
+
+&lt;p&gt;某一个时刻，看着你的样子，像是发现了世界上&lt;em&gt;独一无二&lt;/em&gt;的存在。&lt;/p&gt;
+
+&lt;p&gt;欣喜若狂，旷世宝藏。&lt;/p&gt;
+
+&lt;h2&gt;工作&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;游戏必备&lt;/em&gt;&lt;/p&gt;
+</content>
+   </entry>
+   
+ 
+</feed>

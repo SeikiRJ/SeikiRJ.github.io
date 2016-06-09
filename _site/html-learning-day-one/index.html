@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    *Author:      Seikinmeid	source code from BeiYuu		
+    -->
+    <meta charset="utf-8" />
+    <title>HTML学习 Day One | Seikinmeid's Blog</title>
+    <meta name="author" content="Seikinmeid" />
+    <meta name="description" content="Seikinmeid's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="home-menu">
+        <div class="home-icon-con">
+            <a class="home-menu-icon" href="/">Seikinmeid</a>
+            <a class="home-follow" href="#" title="Contact Me">+</a>
+        </div>
+        <div class="home-contact">
+            <a href="http://weibo.com/u/1725807423" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/js/prettify/prettify.css" />
+<style type="text/css">
+    body { background:#e8e8e8; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+
+<div id="content">
+    <div class="entry">
+        <h1 class="entry-title"><a href="/html-learning-day-one" title="HTML学习 Day One">HTML学习 Day One</a></h1>
+        <p class="entry-date">2014-03-05</p>
+        <h4 style="color:green;font-size: 24px">HTML 学习笔记</h4>
+
+
+<hr />
+
+<p>备注：本文其实只是我的html备忘录，以防以后忘记什么可以回来再看看。</p>
+
+<p>开头<code>&lt;!DOCTYPE html&gt;</code></p>
+
+<p>加粗 <code>&lt;strong&gt; &lt;/strong&gt;</code></p>
+
+<p><strong>CSS</strong>: Cascading Style Sheets</p>
+
+<p><code>&lt;!DOCTYPE&gt;</code>之后，在整个html的文档开头结尾记得加上<code>&lt;html&gt;和&lt;/html&gt;</code></p>
+
+<p><strong>CSS和html的关系</strong>：html就是骨头，骨架，css是骨头外面的皮肉，装扮。</p>
+
+<p><strong>术语</strong>：tags， 就是&lt;>里面的东西，比如之前的html和strong</p>
+
+<p>tags一定要被关闭，就像是这样。<code>&lt;first tag&gt;&lt;second tag&gt;Some text!&lt;/second tag&gt;&lt;/first tag&gt;</code></p>
+
+<p><strong>html文件分两部分</strong>：head and body</p>
+
+<p><strong>head</strong>： head包含了此html文档的各种信息，比如说标题（在游览器标签页上看到的）。</p>
+
+<p>head 实例：<code>&lt;head&gt;&lt;title&gt;Seikinmeid's Blog&lt;/title&gt;&lt;/head&gt;</code></p>
+
+<p><strong>body</strong>: body就是网页内的内容。就是你在网页内能看到的东西，比如文字，链接，图片。</p>
+
+<p>body中的tag， <code>&lt;p&gt;&lt;/p&gt;</code>段落。</p>
+
+<p><strong>body中正文的标题</strong>：用<code>&lt;h1&gt;&lt;/h1&gt;</code>tag,数字越大，字体越小。没有数字，就和<code>&lt;p&gt;</code>tag一样一样的。</p>
+
+<p>标题tag有<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>六种，从大到小</p>
+
+<p><strong>添加链接</strong>：在body中，<code>&lt;a href= seikinmeid.github.io&gt; Seikinmeid's Blog&lt;/a&gt;</code></p>
+
+<p>添加图片，不用close，<code>&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5dTwVy1ujlFcnnPMp6uAjhToa9Qdx7ZfawbYi9ix8oKIj9mnsoqHRA2Y"/&gt;</code></p>
+
+<p><strong>为图片添加超链接</strong>：首先，创建一个普通的链接，将原来填写链接名称的地方换成一个<img>tag，这样就妥了。
+比如
+        <code>&lt;a href="http://seikinmeid.github.io"&gt;
+        &lt;img src="http://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg" /&gt;
+        &lt;/a&gt;</code>
+展现出来的效果是这样的<a href="http://seikinmeid.github.io">
+        <img src="http://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg" />
+        </a></p>
+
+<h3 style="color: Green">PART II</h3>
+
+
+<p><strong>注意缩进</strong>，合适的缩进让你能够更好的编辑代码，在日后更好的理解你自己写的代码。</p>
+
+<p><strong>有序列表</strong>： <code>&lt;ol&gt; &lt;/ol&gt;</code>, 在<code>&lt;ol&gt;</code>中添加<code>&lt;li&gt;</code> tag, 来一条一条的添加条目。
+<strong>无序列表</strong>： <code>&lt;ul&gt;</code> tags</p>
+
+<p><strong>列表中也能嵌套列表</strong></p>
+
+<p><strong>注释</strong>，commment： <code>&lt;!-- what are going to tell me? --&gt;</code></p>
+
+<p><strong>字体大小</strong>: <code>&lt;p style="font-size: 12px"&gt; FONT! &lt;/p&gt;</code></p>
+
+<p><strong>字体颜色</strong>： <code>&lt;h2 style="color: green"&gt;GREEN&lt;/h2&gt;</code></p>
+
+<p><strong>字体颜色大小属性混合</strong>：<code>&lt;p style="color: red; font-size: 12px"&gt; MIXED! &lt;/p&gt;</code></p>
+
+<p><strong>字体</strong>： <code>&lt;p style="font-family: Arial"&gt; Arial &lt;/p&gt;</code></p>
+
+<p><strong>Avaliable FONTS</strong>: http://www.w3.org/TR/CSS21/fonts.html#generic-font-families</p>
+
+<p><strong>文字背景颜色</strong>： <code>style="background-color: Red"</code></p>
+
+<p><strong>文字对齐</strong> <code>style="text-align:center", left, right</code></p>
+
+<p><strong>加粗</strong>： <code>&lt;strong&gt;</code>
+<strong>斜体</strong>： <code>&lt;em&gt;</code></p>
+
+<hr />
+
+<p>一点看法，Markdown却是很简单，比如加粗做title什么的，md只要几个星号就可以了。但是这个简单还是付出了点代价的。像我这样的初学者如果不去花点时间去记住那些符号，那么会很难用，用的很别扭。但是html不一样，尽管很多特性比如插入链接，换字体颜色大小什么的需要做比md较多的输入，但是它胜在一个好记啊，简单的关键词，基本看一遍两遍就可以用了，从这个角度说，html还真是好学又好用~</p>
+
+
+        <div id="disqus_container">
+            <div style="margin-bottom:20px" class="right">
+                <script type="text/javascript" charset="utf-8">
+                (function(){
+                  var _w = 86 , _h = 16;
+                  var param = {
+                    url:location.href,
+                    type:'6',
+                    count:'', /**是否显示分享数，1显示(可选)*/
+                    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+                    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+                    pic:'', /**分享图片的路径(可选)*/
+                    language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+                    rnd:new Date().valueOf()
+                  }
+                  var temp = [];
+                  for( var p in param ){
+                    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+                  }
+                  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+                })()
+                </script>
+            </div>
+            <a href="#" class="comment" onclick="return false;">点击查看评论</a>
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="sidenav">
+        <h2>Blog</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/godaddy">Godaddy+Github Pages</a></li>
+        
+            <li><a href="/opening">开篇</a></li>
+        
+        </ul>
+
+        <h2>Learning</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/html-learning-day-two">HtMl学习，Day Two</a></li>
+        
+            <li><a href="/html-learning-day-one">HTML学习 Day One</a></li>
+        
+            <li><a href="/a-note-about-git">我发博客，我用Git</a></li>
+        
+            <li><a href="/install-jekyll-in-Mac-osx">Mac osx Mavericks下Jekyll安装过程</a></li>
+        
+        </ul>
+
+        <h2>Project</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/thanks-beiyuu">感谢BeiYuu</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+<script src="/js/post.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

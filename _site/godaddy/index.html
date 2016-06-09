@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    *Author:      Seikinmeid	source code from BeiYuu		
+    -->
+    <meta charset="utf-8" />
+    <title>Godaddy+Github Pages | Seikinmeid's Blog</title>
+    <meta name="author" content="Seikinmeid" />
+    <meta name="description" content="Seikinmeid's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="home-menu">
+        <div class="home-icon-con">
+            <a class="home-menu-icon" href="/">Seikinmeid</a>
+            <a class="home-follow" href="#" title="Contact Me">+</a>
+        </div>
+        <div class="home-contact">
+            <a href="http://weibo.com/u/1725807423" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/js/prettify/prettify.css" />
+<style type="text/css">
+    body { background:#e8e8e8; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+
+<div id="content">
+    <div class="entry">
+        <h1 class="entry-title"><a href="/godaddy" title="Godaddy+Github Pages">Godaddy+Github Pages</a></h1>
+        <p class="entry-date">2014-06-13</p>
+        <h3>域名购买</h3>
+
+<p>直接上<code>godaddy.com</code>去买就行。据说可以搞到coupon，可以很便宜的买到域名，不过我自己买的直接就很便宜啊！哈哈哈~两年都没多少钱~</p>
+
+<h3>CNAME</h3>
+
+<p>在你的Github project根目录中，创建一个文件，名字就是CNAME，内容就是你刚买的域名，我的就是<code>seikinmeid.me</code>了。</p>
+
+<h3>最后一步，Godaddy里的设置。</h3>
+
+<p>点击 "DOMAINS"找到你的域名。
+<img src="http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at142523_zpsefb9e66e.png" alt="one" /></p>
+
+<p>点击你的域名进入Domain Details，我这里就是SEIKINMEID.ME了。</p>
+
+<p>点击Settings右边的DNS Zone File,做两处修改。
+<img src="http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at142637_zpsdd31ced2.png" alt="two" /></p>
+
+<ul>
+<li><p> 第一处，标有A(Host)的地方，Points To 到ip地址192.30.252.153或者192.30.252.154。
+<img src="http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at143112_zpscb93a571.png" alt="three" /></p></li>
+<li><p> 第二处，标有CName(Alias)的地方，host为www一栏，Points To到你的Github Pages的地址，我这里就是seikinmeid.github.io了~
+<img src="http://i867.photobucket.com/albums/ab235/seikinmeid/ScreenShot2014-06-13at143121_zpsd13cc74a.png" alt="four" /></p>
+
+<p>做完这些设置，应该就可以正常解析了！但是由于众所周知的原因，godaddy的域名可能在国内无法解析。那么，这里只要再把第二张图里你看到的Nameservers改成开头为NS69和NS70的就可以了。怎么改？点！点它！！就那个manage！！</p></li>
+</ul>
+
+
+<p>题外话：买域名绑定域名这都是我第一次做，以前也没了解过。今天早上看到说godaddy支持支付宝，我就心血来潮试了下。购买没问题，绑定的时候完全不知道怎么做。最后还是凭借谷歌，慢慢的给解决了。下面三条references就是谷歌来的。所以，你看，学会搜索是多么的重要。</p>
+
+<p>REFERENCES:</p>
+
+<p><code>https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages</code>
+<code>https://medium.com/@LovettLovett/github-pages-godaddy-f0318c2f25a</code>
+<code>http://www.gegehost.com/2011/06/28/nameserver/</code></p>
+
+
+        <div id="disqus_container">
+            <div style="margin-bottom:20px" class="right">
+                <script type="text/javascript" charset="utf-8">
+                (function(){
+                  var _w = 86 , _h = 16;
+                  var param = {
+                    url:location.href,
+                    type:'6',
+                    count:'', /**是否显示分享数，1显示(可选)*/
+                    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+                    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+                    pic:'', /**分享图片的路径(可选)*/
+                    language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+                    rnd:new Date().valueOf()
+                  }
+                  var temp = [];
+                  for( var p in param ){
+                    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+                  }
+                  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+                })()
+                </script>
+            </div>
+            <a href="#" class="comment" onclick="return false;">点击查看评论</a>
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="sidenav">
+        <h2>Blog</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/godaddy">Godaddy+Github Pages</a></li>
+        
+            <li><a href="/opening">开篇</a></li>
+        
+        </ul>
+
+        <h2>Learning</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/html-learning-day-two">HtMl学习，Day Two</a></li>
+        
+            <li><a href="/html-learning-day-one">HTML学习 Day One</a></li>
+        
+            <li><a href="/a-note-about-git">我发博客，我用Git</a></li>
+        
+            <li><a href="/install-jekyll-in-Mac-osx">Mac osx Mavericks下Jekyll安装过程</a></li>
+        
+        </ul>
+
+        <h2>Project</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/thanks-beiyuu">感谢BeiYuu</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+<script src="/js/post.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+</body>
+</html>
