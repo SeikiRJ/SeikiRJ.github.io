@@ -5,7 +5,7 @@ pygments: true
 paginate: 8
 permalink: /:title
 
-title: Seikinmeid's Blog
-url: http://seikinmeid.github.io
+title: SeikiRJ's Blog
+url: http://seikirj.github.io
 feed: /atom.xml
-author_info: <a href="http://seikinmeid.github.io">Seikinmeid</a>
+author_info: <a href="http://seikirj.github.io">SeikiRJ</a>
