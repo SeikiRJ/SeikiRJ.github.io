@@ -1,6 +1,6 @@
 auto: true
 
-pygments: true
+rouge: true
 paginate: 8
 permalink: /:title
 
