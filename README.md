@@ -1,6 +1,6 @@
-#一点点说明
+#A little bit of note
 ------------------------------
 
-这是[BeiYuu.com](http://beiyuu.com)的源代码
+Source code of this blog is from [BeiYuu.com](http://beiyuu.com)
 
-记录了一些学习的过程。
+Here is where I leave some trails of my road on studying... everything...
