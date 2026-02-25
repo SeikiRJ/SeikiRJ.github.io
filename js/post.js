@@ -21,7 +21,10 @@ $(document).ready(function(){
         }
     };
 
-    $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
+    var hasCodeBlock = $('pre').length > 0;
+    if (hasCodeBlock) {
+        $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
+    }
 
     //***********************
     //**评论的代码也删掉哦***
@@ -134,7 +137,7 @@ $(document).ready(function(){
 
             genIndex();
 
-            $(window).load(function(){
+            $(window).on('load', function(){
                 var scrollTop = [];
                 $.each($('#menuIndex li a'),function(index,item){
                     var selector = $(item).attr('data-id') ? '#'+$(item).attr('data-id') : 'h1'
@@ -200,9 +203,11 @@ $(document).ready(function(){
         }
     })();
 
-    $.getScript('/js/prettify/prettify.js',function(){
-        prettyPrint();
-    });
+    if (hasCodeBlock) {
+        $.getScript('/js/prettify/prettify.js',function(){
+            prettyPrint();
+        });
+    }
 
     if(/\#comment/.test(location.hash)){
         $('#disqus_container .comment').trigger('click');

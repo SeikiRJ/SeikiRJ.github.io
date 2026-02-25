@@ -5,44 +5,50 @@ layout:           default
 {{ content }}
 
 <script type="text/javascript">
-    $(function(){
-        function animateBar($item,noAni){
-            var spanLeft = $item.find('span').offset().left;
-            var conLeft = $item.parent().offset().left;
-            var left = spanLeft - conLeft;
-            var width = $item.find('span').width() + 8;
+    document.addEventListener('DOMContentLoaded', function () {
+        var cateBar = document.getElementById('cateBar');
+        var categoryItems = Array.prototype.slice.call(document.querySelectorAll('.artical-cate li'));
 
-            if(noAni){
-                $('#cateBar').css({left:left,width:width})
-            }else{
-                $('#cateBar').stop().animate({left:left,width:width},300)
-            }
+        if (!cateBar || !categoryItems.length) {
+            return;
         }
 
-        var waitForFinalEvent = (function () {
-            var timers = {};
-            return function (callback, ms, uniqueId) {
-                if (!uniqueId) {
-                    uniqueId = "Don't call this twice without a uniqueId";
-                }
-                if (timers[uniqueId]) {
-                    clearTimeout (timers[uniqueId]);
-                }
-                timers[uniqueId] = setTimeout(callback, ms);
-            };
-        })();
+        var activeItem = document.querySelector('.artical-cate .on') || categoryItems[0];
 
-        $('.artical-cate li').mouseenter(function(){
-            animateBar($(this));
-        }).mouseleave(function(){
-            animateBar($('.artical-cate .on'));
+        function moveBar(item) {
+            var span = item.querySelector('span');
+            var parent = item.parentElement;
+            if (!span || !parent) {
+                return;
+            }
+
+            var spanRect = span.getBoundingClientRect();
+            var parentRect = parent.getBoundingClientRect();
+            var left = spanRect.left - parentRect.left;
+            var width = spanRect.width + 8;
+
+            cateBar.style.left = left + 'px';
+            cateBar.style.width = width + 'px';
+        }
+
+        var resizeTimer;
+        function debounceResize() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                moveBar(activeItem);
+            }, 100);
+        }
+
+        categoryItems.forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+                moveBar(item);
+            });
+            item.addEventListener('mouseleave', function () {
+                moveBar(activeItem);
+            });
         });
 
-        $(window).resize(function(e){
-            waitForFinalEvent(function(){
-                animateBar($('.artical-cate .on'));
-            })
-        })
-        animateBar($('.artical-cate .on'),true);
+        window.addEventListener('resize', debounceResize);
+        moveBar(activeItem);
     });
 </script>
