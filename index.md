@@ -1,5 +1,7 @@
 ---
 layout: home
+title: Blog
+description: Latest blog posts and notes from SeikiRJ about development and technology.
 ---
 
 <div class="index-content blog">

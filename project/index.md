@@ -1,5 +1,7 @@
 ---
 layout: home
+title: Project
+description: Project updates and build logs published by SeikiRJ.
 ---
 
 <div class="index-content project">

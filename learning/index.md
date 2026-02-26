@@ -1,5 +1,7 @@
 ---
 layout: home
+title: Learning
+description: Learning notes and tutorials collected by SeikiRJ.
 ---
 
 <div class="index-content learning">
