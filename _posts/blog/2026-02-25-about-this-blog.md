@@ -3,7 +3,6 @@ layout: post
 title: 关于这个博客
 description: 这篇文章简单介绍这个博客会写什么、为什么写、以及希望和读者建立怎样的交流。
 category: blog
-tags: ["#intro", "#blog"]
 ---
 
 欢迎来到这个博客 👋
