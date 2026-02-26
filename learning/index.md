@@ -24,7 +24,37 @@ description: Learning notes and tutorials collected by SeikiRJ.
             </li>
         {% endfor %}
         </ul>
+
+        <div class="tagged-posts">
+            <h2>Posts by Tag</h2>
+            {% for tag in site.tags %}
+                {% assign tag_name = tag[0] | remove: "#" %}
+                {% assign tag_posts = tag[1] | where: "category", "learning" %}
+                {% if tag_posts.size > 0 %}
+                <section id="tag-{{ tag_name | slugify }}" class="tag-group">
+                    <h3>#{{ tag_name }}</h3>
+                    <ul>
+                    {% for post in tag_posts %}
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
     <div class="aside">
+        <div class="tag-sidebar">
+            <h3>Tags</h3>
+            <ul>
+            {% for tag in site.tags %}
+                {% assign tag_name = tag[0] | remove: "#" %}
+                {% assign tag_posts = tag[1] | where: "category", "learning" %}
+                {% if tag_posts.size > 0 %}
+                <li><a href="#tag-{{ tag_name | slugify }}">#{{ tag_name }} <span>({{ tag_posts.size }})</span></a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
