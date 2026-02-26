@@ -5,6 +5,10 @@ paginate: 8
 permalink: /:title
 
 title: SeikiRJ's Blog
-url: http://seikirj.github.io
+description: Notes on software engineering, learning experiments, and side projects by SeikiRJ.
+url: https://seikirj.github.io
 feed: /atom.xml
-author_info: <a href="http://seikirj.github.io">SeikiRJ</a>
+author: SeikiRJ
+author_info: <a href="https://seikirj.github.io">SeikiRJ</a>
+lang: en
+social_image: /favicon.ico
